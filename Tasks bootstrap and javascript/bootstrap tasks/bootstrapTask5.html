@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BS Task 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            background-color: #f8f9fa; /* Set overall background color */
+        }
+
+        .form-container {
+            background-color: #f1f1f1; /* Grey background for form */
+            padding: 20px; /* Add padding inside the form container */
+            border-radius: 10px; /* Rounded corners for form */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect for form */
+        }
+
+        .fa-solid {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.125em;
+            font-size: 1.25rem; /* Adjust icon size */
+            transition: color 0.3s ease; /* Smooth transition for icon color change */
+        }
+
+        .col-form-label.error-label {
+            color: #dc3545; /* Red color for label when there's an error */
+            transition: color 0.3s ease; /* Smooth transition for label color change */
+        }
+
+        .input-group-text.error-icon {
+            color: #dc3545; /* Red color for icon when there's an error */
+            transition: color 0.3s ease; /* Smooth transition for icon color change */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10 mt-5">
+                <div class="form-container">
+                    <form class="needs-validation" novalidate>
+                        <div class="row mb-3">
+                            <label for="inputFirstName" class="col-sm-2 col-form-label">First Name</label>
+                            <div class="col-sm-10 has-validation">
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" class="form-control" id="inputFirstName" required>
+                                    <div class="invalid-feedback">
+                                        Please supply your first name
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputLastName" class="col-sm-2 col-form-label">Last Name</label>
+                            <div class="col-sm-10 has-validation">
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" class="form-control" id="inputLastName" required>
+                                    <div class="invalid-feedback">
+                                        Please supply your last name
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10 has-validation">
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="email" class="form-control" id="inputEmail" required>
+                                    <div class="invalid-feedback">
+                                        Please supply your email address
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPhone" class="col-sm-2 col-form-label">Phone #</label>
+                            <div class="col-sm-10 has-validation">
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </span>
+                                    <input type="tel" class="form-control" id="inputPhone" required>
+                                    <div class="invalid-feedback">
+                                        Please supply your phone number
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputAddress" class="col-sm-2 col-form-label">Address</label>
+                            <div class="col-sm-10 has-validation">
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-house"></i>
+                                    </span>
+                                    <input type="text" class="form-control" id="inputAddress" required>
+                                    <div class="invalid-feedback">
+                                        Please supply your street address
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputCity" class="col-sm-2 col-form-label">City</label>
+                            <div class="col-sm-10 has-validation">
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-house"></i>
+                                    </span>
+                                    <input type="text" class="form-control" id="inputCity" required>
+                                    <div class="invalid-feedback">
+                                        Please supply your city
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputState" class="col-sm-2 col-form-label">State</label>
+                            <div class="col-sm-10 has-validation">
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-list"></i>
+                                    </span>
+                                    <select class="form-control" id="inputState" required>
+                                        <option value="" selected disabled> --Select a state-- </option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                        <option value="Jharkhand">Jharkhand</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Manipur">Manipur</option>
+                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Mizoram">Mizoram</option>
+                                        <option value="Nagaland">Nagaland</option>
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Sikkim">Sikkim</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Tripura">Tripura</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Uttarakhand">Uttarakhand</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a state
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Do you have hosting?</label>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="inputHosting" id="hostingYes"
+                                        value="yes" required>
+                                    <label class="form-check-label" for="hostingYes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="inputHosting" id="hostingNo"
+                                        value="no" required>
+                                    <label class="form-check-label" for="hostingNo">
+                                        No
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        Please choose whether you have hosting.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputDescription" class="col-sm-2 col-form-label">Project Description</label>
+                            <div class="col-sm-10 has-validation">
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </span>
+                                    <textarea class="form-control" id="inputDescription" rows="3" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please supply your project description
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="submit" class="col-sm-2"></label>
+                            <div class="col-sm-10">
+                                <button type="submit" class="btn btn-warning text-white" id="submit">Send <i
+                                        class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+            
+            <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function () {
+                    'use strict'
+            
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.querySelectorAll('.needs-validation')
+            
+                    // Loop over them and prevent submission
+                    Array.prototype.slice.call(forms)
+                        .forEach(function (form) {
+                            form.addEventListener('submit', function (event) {
+                                if (!form.checkValidity()) {
+                                    event.preventDefault()
+                                    event.stopPropagation()
+            
+                                    // Highlight labels and icons of invalid fields
+                                    Array.from(form.elements).forEach(function (field) {
+                                        if (!field.checkValidity()) {
+                                            var inputGroup = field.closest('.has-validation');
+                                            if (inputGroup) {
+                                                inputGroup.classList.add('was-validated');
+                                                var icon = inputGroup.querySelector('.input-group-text');
+                                                if (icon) {
+                                                    icon.classList.add('error-icon');
+                                                }
+                                                var label = form.querySelector(`label[for=${field.id}]`);
+                                                if (label) {
+                                                    label.classList.add('error-label');
+                                                }
+                                            }
+                                        }
+                                    });
+                                }
+            
+                                form.classList.add('was-validated');
+                            }, false);
+                        });
+                })();
+            </script>
+            

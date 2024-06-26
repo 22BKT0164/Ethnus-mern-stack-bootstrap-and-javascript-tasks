@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+    <style>
+        /* button {
+            margin-bottom: 10px;
+        } */
+
+        .output {
+            margin-top: 3px;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showDate()">show date</button>
+    <p id="dateOutput" class="output"></p>
+</br>
+
+
+
+    <button onclick="showTime()">show Time</button>
+    <p id="timeOutput" class="output"></p>
+
+    <script>
+        function showDate() {
+            let now = new Date();
+            let monthNames = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"];
+            let formattedDate = now.getDate() + '/' + monthNames[now.getMonth()] + '/' + now.getFullYear();
+            document.getElementById('dateOutput').innerText = formattedDate;
+        }
+
+        function showTime() {
+            let now = new Date();
+            let timeOutput = now.toString();
+            document.getElementById('timeOutput').innerText = timeOutput;
+        }
+    </script>
+</body>
+</html>
